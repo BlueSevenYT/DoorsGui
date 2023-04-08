@@ -1,0 +1,105 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("BlueSeven's Hacks!", "Ocean")
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Player Settings")
+
+Section:NewSlider("Walkspeed", "Changes your walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "Changes your jump power", 40, 20, function(p5) -- 40 (MaxValue) | 20 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = p5
+end)
+
+Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.LeftControl, function()
+	Library:ToggleUI()
+end)
+
+Section:NewButton("Give Crucifix (works on anything)", "Crucifix that works on anything!", function()
+_G.Uses = 9999999
+_G.Range = 30
+_G.OnAnything = true
+_G.Fail = false
+loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+ print("Clicked")
+end)
+
+Section:NewButton("bypass thing", "", function()
+local LocalPlayer = game.Players.LocalPlayer
+local m = Instance.new("Message")
+m.Parent=game.Workspace
+m.Text = "Made by BlueSeven"
+wait(0.1)
+m:Remove()
+wait()
+
+game.Players.LocalPlayer.PlayerGui.MainUI.ItemShop.Visible = false 
+
+game.ReplicatedStorage.ClientModules.EntityModules:Destroy()
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))() 
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Section:NewButton("Infinite Yield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local Tab = Window:NewTab("Game")
+local Section = Tab:NewSection("Game")
+Section:NewSlider("FOV", "Changes your fov lol", 250, 16, function(v) -- 250 (MaxValue) | 0 (MinValue)
+workspace.CurrentCamera.FieldOfView = v
+end)
+Section:NewButton("Fullbright", "Gives fullbright", function() local Light = game:GetService("Lighting")
+
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+
+dofullbright()
+
+Light.LightingChanged:Connect(dofullbright)
+    print("Clicked")
+end)
+
+-- fun items!
+ local Tab = Window:NewTab("Plushies")
+local FunSection = Tab:NewSection("Plushies")
+ 
+FunSection:NewButton("Figure Plushy", "has sound!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/PzfDRbAH'))()
+end)
+ 
+FunSection:NewButton("SEEK PLUSHY!", "has sound!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/8mazJ8eZ'))()
+end)
+ 
+
+local Tab = Window:NewTab("Scanner")
+local ScannerSection = Tab:NewSection("Scanner options")
+ 
+ScannerSection:NewButton("Scanner in invintory (will not rift)", "gives you a scanner", function()
+    _G.OnShop = true
+ 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+end)
+ 
+ScannerSection:NewButton("Scanner in Rift (will not stay forever) ", "puts scanner in rift, wont last forever", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/bucRxAMi', true))()
+end)
+ 
+ScannerSection:NewButton("Scanner In Shop!", "puts a scanner in the shop", function()
+    _G.UpdateStars = false 
+_G.OnShop = true 
+_G.Price = m.Text = "balls"
+_G.Description = "lsplash big balls" 
+ 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+end)
+ 
+
