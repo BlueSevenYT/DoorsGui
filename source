@@ -18,7 +18,7 @@ Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.LeftContr
 	Library:ToggleUI()
 end)
 
-Section:NewButton("Give Crucifix (works on anything)", "Crucifix that works on anything!", function()
+Section:NewButton("Give Crucifix (works on anything) q + left click!", "Crucifix that works on anything!", function()
 _G.Uses = 9999999
 _G.Range = 30
 _G.OnAnything = true
@@ -107,7 +107,7 @@ ScannerSection:NewButton("Scanner In Shop!", "puts a scanner in the shop", funct
     _G.UpdateStars = false 
 _G.OnShop = true 
 _G.Price = 0 
-_G.Description = "suck my balls" 
+_G.Description = "suck it, LSPLASH!" 
  
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
 end)
