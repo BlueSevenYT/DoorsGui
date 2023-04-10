@@ -107,7 +107,7 @@ ScannerSection:NewButton("Scanner In Shop!", "puts a scanner in the shop", funct
     _G.UpdateStars = false 
 _G.OnShop = true 
 _G.Price = 0 
-_G.Description = "suck it, LSPLASH!" 
+_G.Description = "suck my balls" 
  
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
 end)
@@ -216,5 +216,3 @@ end
 coroutine.wrap(CIRR_fake_script)()
     print("Clicked")
 end)
- 
-
