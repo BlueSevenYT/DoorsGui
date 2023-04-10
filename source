@@ -31,7 +31,17 @@ Section:NewButton("bypass thing", "", function()
 local LocalPlayer = game.Players.LocalPlayer
 local m = Instance.new("Message")
 m.Parent=game.Workspace
-m.Text = "Made by BlueSeven"
+m.Text = "dont click confirm in the item shop, instead just follow these"
+wait(0.1)
+m.Text = "Exploits should appear after the following messages"
+wait(0.1)
+m.Text = "In infinite yield, type noclip and go out of the elevator"
+wait(0.1)
+m.Text = "Then in MSDOORS, you can enable any thing of your choice"
+wait(0.1)
+m.Text = "Recommended: FullBright, Fov-95, Speed 18, Esp: Door, Items, Entities. No eyes damage,notify entities"
+wait(0.1)
+m.Text = "Made by Dudeitsokayletsplayy,Credits for msdoors in their credit section,inf yield credits at their credits section"
 wait(0.1)
 m:Remove()
 wait()
@@ -96,10 +106,115 @@ end)
 ScannerSection:NewButton("Scanner In Shop!", "puts a scanner in the shop", function()
     _G.UpdateStars = false 
 _G.OnShop = true 
-_G.Price = m.Text = "balls"
-_G.Description = "lsplash big balls" 
+_G.Price = 0 
+_G.Description = "suck it, LSPLASH!" 
  
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+end)
+
+Section:NewButton("screech is as happy meal", "makes screech a happy meal;", function() local Screech = game:GetObjects("rbxassetid://13046474650")[1]
+Screech.Parent = game:GetService("ReplicatedStorage"):WaitForChild("Entities")
+game:GetService("Debris"):AddItem(game:GetService("ReplicatedStorage"):WaitForChild("Entities").Screech, 0)
+    print("Clicked")
+end)
+
+Section:NewButton("noclip", "can you believe that noclip gives you noclip 🤯 😲", function() -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local NoClip = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local injected = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Credits = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0,0,0)
+Main.Size = UDim2.new(0,0,0)
+
+NoClip.Name = "NoClip"
+NoClip.Parent = Main
+NoClip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoClip.Position = UDim2.new(0,0,0)
+NoClip.Size = UDim2.new(0,0,0)
+NoClip.Font = Enum.Font.Cartoon
+NoClip.Text = "NoClip"
+NoClip.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.TextScaled = true
+NoClip.TextSize =  0
+NoClip.TextWrapped = true
+
+UICorner.Parent = NoClip
+
+injected.Name = "injected"
+injected.Parent = Main
+injected.BackgroundColor3 = Color3.fromRGB(52, 255, 21)
+injected.Position = UDim2.new(0,0,00)
+injected.Size = UDim2.new(0,0,0,0)
+injected.Font = Enum.Font.Cartoon
+injected.Text = "injected"
+injected.TextColor3 = Color3.fromRGB(0, 0, 0)
+injected.TextScaled = true
+injected.TextSize = 0
+injected.TextWrapped = true
+
+UICorner_2.Parent = injected
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.Position = UDim2.new(0,0,0)
+Credits.Size = UDim2.new(0,0,0)
+Credits.Font = Enum.Font.Cartoon
+Credits.Text = "Made By DarK#9999"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 0
+Credits.TextWrapped = true
+
+UICorner_3.Parent = Credits
+
+UICorner_4.Parent = Main
+
+-- Scripts:
+
+local function FEIX_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	local runservice = game:GetService("RunService")
+	
+	local player = game:GetService("Players").LocalPlayer
+	runservice.Stepped:Connect(function()
+		for i,v in pairs(player.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.CanCollide = false
+			end
+		end
+	end)
+end
+coroutine.wrap(FEIX_fake_script)()
+local function CIRR_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
+
+	frame = script.Parent.Main
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+end
+coroutine.wrap(CIRR_fake_script)()
+    print("Clicked")
 end)
  
 
