@@ -592,7 +592,3 @@ _G.Fail = false
 loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
  print("Clicked")
 end)
-
-Section:NewButton("Holy Hand Grenade (works on anything)", "Gives Holy Hand Grenade that works on anything", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/HolyGrenadeByNerd.lua"))()
-    print("Clicked")
-end)
