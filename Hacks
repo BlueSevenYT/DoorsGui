@@ -14,7 +14,7 @@ Section:NewSlider("JumpPower", "Changes your jump power", 40, 20, function(p5) -
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = p5
 end)
 
-Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.LeftControl, function()
+Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
 
@@ -591,4 +591,9 @@ _G.OnAnything = true
 _G.Fail = false
 loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
  print("Clicked")
+end)
+
+Section:NewButton("Jeff the killer plushie!", "Gives jeff the killer plushie", function() local tool = game:GetObjects("rbxassetid://13069619857")[1]
+tool.Parent = game.Players.LocalPlayer.Backpack 
+    print("Clicked")
 end)
