@@ -59,6 +59,11 @@ end)
 -- fun items!
  local Tab = Window:NewTab("Plushies")
 local FunSection = Tab:NewSection("Plushies")
+
+Section:NewButton("Jeff the killer plushie!", "Gives jeff the killer plushie", function() local tool = game:GetObjects("rbxassetid://13069619857")[1]
+tool.Parent = game.Players.LocalPlayer.Backpack 
+    print("Clicked")
+end) 
  
 FunSection:NewButton("Figure Plushy", "has sound!", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/PzfDRbAH'))()
@@ -67,11 +72,6 @@ end)
 FunSection:NewButton("Seek Plushy!", "has sound!", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/8mazJ8eZ'))()
 end)
-
-Section:NewButton("Jeff the killer plushie!", "Gives jeff the killer plushie", function() local tool = game:GetObjects("rbxassetid://13069619857")[1]
-tool.Parent = game.Players.LocalPlayer.Backpack 
-    print("Clicked")
-end) 
 
 local Tab = Window:NewTab("Scanner")
 local ScannerSection = Tab:NewSection("Scanner options")
