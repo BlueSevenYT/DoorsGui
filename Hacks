@@ -60,9 +60,7 @@ end)
  local Tab = Window:NewTab("Plushies")
 local FunSection = Tab:NewSection("Plushies")
 
-FunSection:NewButton("Jeff the killer plushie!", "Gives jeff the killer plushie", function() local tool = game:GetObjects("rbxassetid://13069619857")[1]
-tool.Parent = game.Players.LocalPlayer.Backpack 
-    print("Clicked")
+FunSection:NewButton("Jeff the killer plushie!", "Gives jeff the killer plushie", function() local tool = game:GetObjects("rbxassetid://13069619857")
 end) 
  
 FunSection:NewButton("Figure Plushy", "has sound!", function()
