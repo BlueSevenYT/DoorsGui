@@ -29,6 +29,8 @@ wait()
 
 game.Players.LocalPlayer.PlayerGui.MainUI.ItemShop.Visible = false 
 
+game.ReplicatedStorage.ClientModules.EntityModules:Destroy()
+
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))() 
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
