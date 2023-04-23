@@ -14,6 +14,21 @@ Section:NewSlider("JumpPower", "Changes your jump power", 40, 20, function(p5) -
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = p5
 end)
 
+Section:NewLabel("Player Stats")
+Section:NewButton("Stats", "Type /console in chat to get stats.", function()
+    table.foreach(require(game.ReplicatedStorage.ReplicaDataModule).data.Stats, print)
+end)
+Section:NewTextBox("Amount Of Knobs", "Changes your amount of knobs", function(txt)
+	require(game.ReplicatedStorage.ReplicaDataModule).event.Knobs:Fire(tonumber(txt))
+end)
+Section:NewTextBox("Amount Of Revives", "Changes your amount of revives", function(txt)
+	require(game.ReplicatedStorage.ReplicaDataModule).event.Revives:Fire(tonumber(txt))
+end)
+Section:NewTextBox("Amount Of Boosts", "Changes your amount of boosts", function(txt)
+	require(game.ReplicatedStorage.ReplicaDataModule).event.Boosts:Fire(tonumber(txt))
+end)
+
+
 Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
