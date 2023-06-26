@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("BlueSeven's Hacks!", "Ocean")
+local Window = Library.CreateLib("Hack Gui", "Ocean")
 
 local Tab = Window:NewTab("Player")
 
