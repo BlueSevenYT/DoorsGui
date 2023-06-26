@@ -33,23 +33,6 @@ Section:NewKeybind("Hide UI Button", "button to hide ui", Enum.KeyCode.RightCont
 	Library:ToggleUI()
 end)
 
-Section:NewButton("bypass thing", "", function()
-local LocalPlayer = game.Players.LocalPlayer
-local m = Instance.new("Message")
-m.Parent=game.Workspace
-m.Text = "done"
-wait(0.1)
-m:Remove()
-wait()
-
-game.Players.LocalPlayer.PlayerGui.MainUI.ItemShop.Visible = false 
-
-game.ReplicatedStorage.ClientModules.EntityModules:Destroy()
-
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))() 
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
 Section:NewButton("Infinite Yield", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
