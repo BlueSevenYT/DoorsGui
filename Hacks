@@ -214,14 +214,7 @@ end)
 local Tab = Window:NewTab("Mods")
 local Section = Tab:NewSection("Mods")
 
-Section:NewButton("Easter Update!?!!?!??!", "new easter update lsplash???", function() --[[
-
-        
-    ░░█ █▀▀ █▀ █░█ █▀   █▀▀ █▀█ █░█ █▀▀ █ █▀▀ █ █▀▀ █▀▄   █▀ █▀▀ █▀█ █ █▀█ ▀█▀   █▀█ █▀█   █▀ █▀▄▀█ ▀█▀ █░█ █▄░█
-    █▄█ ██▄ ▄█ █▄█ ▄█   █▄▄ █▀▄ █▄█ █▄▄ █ █▀░ █ ██▄ █▄▀   ▄█ █▄▄ █▀▄ █ █▀▀ ░█░   █▄█ █▀▄   ▄█ █░▀░█ ░█░ █▀█ █░▀█
-    why is loading custom models so hard | made by upio#7408 for penguin c:
-    npcs and egg toy made by Luke3#5175, ui for the dialogue made by upio#7408
-]]
+Section:NewButton("Easter Update!?!!?!??!", "new easter update lsplash???", function()
 
 -- initializing variables and stuff
 local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
